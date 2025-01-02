@@ -67,10 +67,10 @@ nmap [Scan Type(s)] [Options] [Target(s)]
 
 ```shell
 # Fast Full Scan
-nmap -sS -sV -p- -T4 &TARGET 
+nmap -sS -sV -p- -T4 $TARGET 
 
 # Live Host Discovery
-nmap -sn &TARGET 
+nmap -sn $TARGET 
 
 # Enumerating SMB (Shares/Vulns/Users)
 nmap -p445 --script=smb-enum-shares,smb-enum-users,smb-vuln-* -T4 $TARGET
